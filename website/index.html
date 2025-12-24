@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mays Group | Home</title>
+    <link rel="stylesheet" href="styles.v10.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- Video Background -->
+
+
+    <!-- Nav -->
+    <nav class="glass-nav">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                    <img src="images/logos/logo.png" alt="Mays Group">
+                    <span class="logo-green">MAY'S</span> <span class="logo-dark">GROUP</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="story.html">Our Story</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="story.html">Our Story</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <header class="hero">
+        <!-- Video Background -->
+        <div class="video-bg">
+            <video autoplay muted loop playsinline poster="images/home/MaysGroup_Small_001.jpg">
+                <source src="videos/bg.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <h1 class="fade-in-up">One Canadian Group.<br><span class="highlight">Every Service,</span><br>Delivered
+                with Excellence.</h1>
+            <p class="fade-in-up delay-1">Quality, Integrity, and Innovation across Construction, Restoration, and
+                Property Maintenance.</p>
+            <div class="hero-btns fade-in-up delay-2">
+                <a href="services.html" class="btn btn-primary">Our Divisions</a>
+                <a href="contact.html" class="btn btn-secondary">Get a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Why Choose May's Group</h2>
+            <div class="features-grid">
+                <div class="feature-card reveal delay-1">
+                    <i data-lucide="map-pin" class="feature-icon"></i>
+                    <h3>Canadian & Local Expertise</h3>
+                    <p>Based in Ontario, we have a deep understanding of local property standards and the harsh
+                        realities of Canadian winters.</p>
+                </div>
+                <div class="feature-card reveal delay-2">
+                    <i data-lucide="heart-handshake" class="feature-icon"></i>
+                    <h3>Customer Service Focus</h3>
+                    <p>We prioritize long-term relationships through fast response times and professional
+                        follow-through.</p>
+                </div>
+                <div class="feature-card reveal delay-3">
+                    <i data-lucide="layers" class="feature-icon"></i>
+                    <h3>One Group, All Solutions</h3>
+                    <p>Property Maintenance, Construction, and Restoration. We provide consistent quality across every
+                        scope.</p>
+                </div>
+                <div class="feature-card reveal delay-1">
+                    <i data-lucide="shield-check" class="feature-icon"></i>
+                    <h3>Safety-Driven Operations</h3>
+                    <p>Safety is paramount in everything we do. Our staff training protects the public and minimizes
+                        risks.</p>
+                </div>
+                <div class="feature-card reveal delay-2">
+                    <i data-lucide="message-square" class="feature-icon"></i>
+                    <h3>Transparent Communication</h3>
+                    <p>Real-time project updates and time-stamped photo documentation eliminate the guesswork.</p>
+                </div>
+                <div class="feature-card reveal delay-3">
+                    <i data-lucide="trophy" class="feature-icon"></i>
+                    <h3>Proven Track Record</h3>
+                    <p>From maintaining 30+ commercial sites to constructing 300+ municipal bus stops, we are trusted
+                        across Ontario.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview -->
+    <section class="section gallery-section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="gallery-grid" id="home-gallery">
+                <!-- JS will pop a few here, but maybe limit for home page? Let's show 6 -->
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="services.html" class="btn btn-secondary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 Mays Group. All rights reserved.</p>
+            <div class="socials">
+                <a href="#"><i data-lucide="instagram"></i></a>
+                <a href="#"><i data-lucide="twitter"></i></a>
+                <a href="#"><i data-lucide="linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.v10.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

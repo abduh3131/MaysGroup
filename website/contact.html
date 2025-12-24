@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mays Group | Contact</title>
+    <link rel="stylesheet" href="styles.v10.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="blob-cont">
+        <div class="blob blob-1"></div>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                    <img src="images/logos/logo.png" alt="Mays Group">
+                    <span class="logo-green">MAY'S</span> <span class="logo-dark">GROUP</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="story.html">Our Story</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="story.html">Our Story</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <section class="section header-section">
+        <div class="container">
+            <h1 class="page-title fade-in-up" style="padding-top: 45px;">Contact Us</h1>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="contact-box glass-card reveal">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><i data-lucide="map-pin"></i> 31 Medulla Ave, Etobicoke, ON M8Z 5L6</p>
+                    <p><i data-lucide="phone"></i> (416)-820-6956</p>
+                    <p><i data-lucide="mail"></i> Mustafa@maysgroup.ca</p>
+                    <div class="map-container" style="margin-top: 30px; border-radius: 15px; overflow: hidden;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.621234567!2d-79.530!3d43.625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b37c000000000%3A0x0000000000000000!2s31%20Medulla%20Ave%2C%20Etobicoke%2C%20ON%20M8Z%205L6!5e0!3m2!1sen!2sca!4v1600000000000!5m2!1sen!2sca"
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/mjgbzwev" method="POST">
+                    <h3>Send a Message</h3>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 Mays Group. All rights reserved.</p>
+            <div class="socials">
+                <a href="#"><i data-lucide="instagram"></i></a>
+                <a href="#"><i data-lucide="twitter"></i></a>
+                <a href="#"><i data-lucide="linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.v10.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>
