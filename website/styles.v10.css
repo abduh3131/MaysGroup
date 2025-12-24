@@ -698,27 +698,33 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0 auto 20px;
+
+    overflow: hidden;
+    border: 3px solid transparent;
 }
 
 .icon-wrapper img {
-    max-width: 60%;
-    max-height: 60%;
-    object-fit: contain;
+    width: 99%;
+    height: 99%;
+    object-fit: cover;
 }
 
 .construction .icon-wrapper {
     background: #fff7ed;
     color: var(--primary-orange);
+    border-color: var(--primary-orange);
 }
 
 .restoration .icon-wrapper {
     background: #fefce8;
     color: var(--primary-yellow);
+    border-color: var(--primary-yellow);
 }
 
 .maintenance .icon-wrapper {
     background: #f0fdf4;
     color: var(--primary-green);
+    border-color: var(--primary-green);
 }
 
 .div-icon {
