@@ -672,13 +672,22 @@ body {
     border-radius: 25px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
     border-top: 5px solid transparent;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    color: inherit;
 }
 
 .division-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.division-card:focus-visible {
+    outline: 3px solid var(--primary-green);
+    outline-offset: 4px;
 }
 
 .division-card.construction {
@@ -849,6 +858,17 @@ body {
     align-self: flex-start;
 }
 
+.career-card.single-card {
+    grid-column: 1 / -1;
+    max-width: 520px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.career-card.single-card .btn {
+    align-self: center;
+}
+
 .career-meta {
     display: flex;
     gap: 10px;
@@ -944,6 +964,76 @@ body {
 
 .socials a:hover {
     color: var(--primary-green);
+}
+
+/* Customers marquee */
+.customers-section {
+    background: #0b1324;
+    color: #f8fafc;
+    padding-bottom: 60px;
+}
+
+.customers-section .section-title,
+.customers-section .section-subtitle {
+    text-align: center;
+    color: #f8fafc;
+}
+
+.customer-marquee {
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+    padding: 10px 0 0;
+}
+
+.marquee-track {
+    display: flex;
+    gap: 32px;
+    min-width: 100%;
+    animation: scroll-customers 28s linear infinite;
+}
+
+.customer-group {
+    min-width: 320px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.customer-group h3 {
+    color: #c7f6c7;
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+}
+
+.customer-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 8px;
+}
+
+.customer-group li {
+    color: #e2e8f0;
+    font-size: 0.98rem;
+}
+
+@keyframes scroll-customers {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .marquee-track {
+        animation-duration: 22s;
+    }
 }
 
 /* Animations */
