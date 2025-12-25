@@ -987,12 +987,6 @@ body {
     color: #f8fafc;
 }
 
-.customer-legend {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
 .customer-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1063,22 +1057,6 @@ body {
     top: 10px;
 }
 
-.customer-tag {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6px 12px;
-    border-radius: 999px;
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: #0b1324;
-    background: #c7f6c7;
-}
-
-.customer-tag.construction {
-    background: #fcd34d;
-}
-
 @media (max-width: 900px) {
     .customer-grid {
         grid-template-columns: 1fr;
@@ -1089,14 +1067,12 @@ body {
         align-items: flex-start;
     }
 }
-
 @media (max-width: 640px) {
     .customer-card__list {
         grid-template-columns: 1fr;
     }
 
-    .customer-card__pill,
-    .customer-tag {
+    .customer-card__pill {
         font-size: 0.85rem;
     }
 }
