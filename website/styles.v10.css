@@ -662,6 +662,10 @@ body {
     gap: 40px;
 }
 
+.divisions-section {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, #f8fafc 100%);
+}
+
 .division-card {
     background: white;
     padding: 40px;
@@ -765,6 +769,103 @@ body {
 
 .masonry-item:hover img {
     transform: scale(1.02);
+}
+
+.light-bg {
+    background: #f5f7fb;
+}
+
+/* Careers */
+.careers-intro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+.career-highlight,
+.career-aside {
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+}
+
+.career-highlight h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.career-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.career-list i {
+    color: var(--primary-green);
+    margin-right: 8px;
+}
+
+.career-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #e6f4ec;
+    color: var(--primary-green);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.career-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.career-card {
+    background: white;
+    padding: 28px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.career-card .btn {
+    align-self: flex-start;
+}
+
+.career-meta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.icon-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #e6f4ec;
+    color: var(--primary-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
 }
 
 @media (max-width: 900px) {
