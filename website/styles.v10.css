@@ -975,9 +975,10 @@ body {
 
 .customers-header {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    text-align: center;
+    gap: 12px;
     margin-bottom: 28px;
 }
 
@@ -1060,11 +1061,6 @@ body {
 @media (max-width: 900px) {
     .customer-grid {
         grid-template-columns: 1fr;
-    }
-
-    .customers-header {
-        flex-direction: column;
-        align-items: flex-start;
     }
 }
 @media (max-width: 640px) {
