@@ -666,6 +666,106 @@ body {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, #f8fafc 100%);
 }
 
+.about-section {
+    padding-top: 30px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.about-card {
+    background: white;
+    padding: 36px;
+    border-radius: 24px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(46, 139, 87, 0.08);
+}
+
+.about-card .section-title,
+.about-card .section-subtitle {
+    text-align: left;
+    margin-left: 0;
+}
+
+.about-card .section-subtitle {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.about-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #45505b;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.about-pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.about-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: #f0fdf4;
+    color: #1b4d33;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: inset 0 0 0 1px rgba(46, 139, 87, 0.18);
+}
+
+.about-aside {
+    display: grid;
+    gap: 16px;
+    align-content: start;
+}
+
+.about-aside__card {
+    background: rgba(255, 255, 255, 0.88);
+    border-radius: 18px;
+    padding: 18px 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+    align-items: center;
+    border: 1px solid rgba(31, 41, 55, 0.08);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.04);
+}
+
+.about-aside__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f0fdf4, #d1fae5);
+    box-shadow: inset 0 0 0 1px rgba(46, 139, 87, 0.2);
+}
+
+.about-aside__icon--gold {
+    background: linear-gradient(135deg, #fff7ed, #fef3c7);
+    box-shadow: inset 0 0 0 1px rgba(245, 158, 11, 0.25);
+}
+
+.about-aside__title {
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+    color: #1f2937;
+}
+
+.about-aside__text {
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 0.98rem;
+}
+
 .division-card {
     background: white;
     padding: 40px;
@@ -891,6 +991,14 @@ body {
 @media (max-width: 900px) {
     .masonry-grid {
         column-count: 2;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-aside {
+        grid-template-columns: 1fr;
     }
 }
 
