@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mays Group | Our Story</title>
+    <link rel="stylesheet" href="styles.v10.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Page organization improvements */
+        .story-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .story-top {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            align-items: start;
+            margin-top: 10px;
+        }
+
+        .story-lead {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 18px;
+        }
+
+        .story-block {
+            margin-top: 18px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(0, 0, 0, 0.07);
+        }
+
+        .story-block-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+
+        .story-text {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: #444;
+            margin-bottom: 14px;
+        }
+
+        .image-content {
+            position: sticky;
+            top: 120px;
+        }
+
+        .caption {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Two images side by side */
+        .story-images-row {
+            display: flex;
+            gap: 20px;
+            margin-top: 45px;
+        }
+
+        .story-images-row .story-image {
+            flex: 1;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+            background: #fff;
+        }
+
+        .story-images-row .story-image img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Quote box spacing */
+        .quote-box {
+            margin-top: 55px;
+            padding: 35px 30px;
+            border-radius: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .story-top {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .image-content {
+                position: static;
+            }
+
+            .story-images-row {
+                flex-direction: column;
+            }
+
+            .story-images-row .story-image img {
+                height: 260px;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="blob-cont">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                    <img src="images/logos/logo.png" alt="Mays Group">
+                    <span class="logo-green">MAY'S</span> <span class="logo-dark">GROUP</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="story.html" class="active">Our Story</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="story.html">Our Story</a>
+        <a href="services.html">Services</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <section class="section header-section">
+        <div class="container">
+            <h1 class="page-title fade-in-up" style="padding-top: 45px;">Our Story</h1>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="container story-wrap">
+            <div class="story-top">
+                <div class="text-content reveal">
+                    <p class="story-lead">
+                        May’s Group began in 2014 as a small, family-run operation cutting grass and maintaining
+                        properties with a simple focus: show up, do the work properly, and treat clients with respect.
+                        That consistency led to growth year after year, as customers trusted us with larger
+                        responsibilities and higher standards.
+                    </p>
+
+                    <div class="story-block">
+                        <div class="story-block-title">Foundation</div>
+                        <p class="story-text">
+                            The founder, Mustafa Tawfiq, studied aviation and is a former pilot. The discipline of
+                            aviation, planning, safety, documentation, and precision became the foundation of how May’s
+                            Group operates. As demand expanded, we grew from seasonal maintenance into year-round
+                            property services, then into larger commercial and municipal work. In 2018, May’s Group was
+                            formally incorporated and evolved into a diversified Canadian group with three divisions:
+                            Property Maintenance, Construction, and Restoration.
+                        </p>
+                    </div>
+
+                    <div class="story-block">
+                        <div class="story-block-title">Scale</div>
+                        <p class="story-text">
+                            Today, we service over 40 commercial properties and have successfully completed major
+                            projects across Ontario, including over 300 bus stops, parks, and specialized builds such as
+                            medical and lab construction.
+                        </p>
+                    </div>
+
+                    <div class="story-block">
+                        <div class="story-block-title">Standards</div>
+                        <p class="story-text">
+                            What makes May’s Group different is that we invest in people and standards. We consistently
+                            train our staff to deliver reliable, safe, high-quality work and we reward long-term
+                            commitment.
+                        </p>
+                    </div>
+
+                    <div class="story-block">
+                        <div class="story-block-title">Hands On</div>
+                        <p class="story-text">
+                            May’s Group remains hands-on and personal. The founder is still heavily involved in
+                            day-to-day operations and stays personally in touch with every client, ensuring
+                            accountability, quick decisions, and the same high standard on every site season after
+                            season.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="image-content reveal delay-1">
+                    <img src="images/au5.png" alt="Mustafa Tawfiq - Founder" class="rounded-img large-shadow">
+                    <div class="caption">Mustafa Tawfiq, Founder</div>
+                </div>
+            </div>
+
+            <div class="story-images-row reveal">
+                <div class="story-image">
+                    <img src="images/au2.png" alt="Mays Group Team">
+                </div>
+
+                <div class="story-image">
+                    <img src="images/au3.png" alt="Mays Group Construction Work">
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="quote-box reveal"
+                style="text-align: center; max-width: 900px; margin-left: auto; margin-right: auto;">
+                <h3 style="font-size: 2rem; color: var(--primary-green); margin-bottom: 14px;">Our Difference</h3>
+                <p style="font-size: 1.1rem; line-height: 1.7; color: #444;">
+                    "What makes May’s Group different is that we invest in people and standards. We consistently train
+                    our staff to deliver reliable, safe, high-quality work and we reward long-term commitment."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 Mays Group. All rights reserved.</p>
+            <div class="socials">
+                <a href="#"><i data-lucide="instagram"></i></a>
+                <a href="#"><i data-lucide="twitter"></i></a>
+                <a href="#"><i data-lucide="linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.v10.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>
