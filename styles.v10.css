@@ -317,6 +317,8 @@ body {
         width: min(980px, 100%);
         margin-left: auto;
         margin-right: auto;
+        margin-top: -80px;
+        /* Pull closer to title */
     }
 
     .gallery-grid .carousel-container {
@@ -621,6 +623,24 @@ body {
     color: var(--dark-text);
 }
 
+.gallery-section {
+    background-color: #e6ebe7;
+    padding-bottom: 40px;
+    /* Reduced from default 80px */
+}
+
+.gallery-section .section-title {
+    margin-bottom: 20px;
+}
+
+.gallery-btn-container {
+    text-align: center;
+    margin-top: -30px;
+    /* Pull button closer to carousel */
+    position: relative;
+    z-index: 5;
+}
+
 .section-subtitle {
     text-align: center;
     font-size: 1.2rem;
@@ -767,6 +787,7 @@ body {
     .about-card .section-title,
     .about-card .section-subtitle {
         text-align: left;
+
     }
 }
 
