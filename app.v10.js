@@ -242,8 +242,11 @@ const initSimpleSlideshow = (containerId, images, interval = 5000) => {
 
 // Init About Slideshow
 initSimpleSlideshow('about-slideshow', [
-    'images/aboutus.png',
-    'images/au2.png',
-    'images/au3.png',
-    'images/au5.png'
+    'images/AboutUs/aboutus.png',
+    'images/AboutUs/au2.png',
+    'images/AboutUs/IMG-20190523-WA0003.jpg',
+    'images/AboutUs/IMG-20190822-WA0023.jpg',
+    'images/AboutUs/IMG-20190822-WA0040.jpg',
+    'images/AboutUs/IMG-20201201-WA0052.jpg',
+    'images/AboutUs/IMG-20230820-WA0003.jpg',
 ], 5000);

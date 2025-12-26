@@ -55,19 +55,62 @@
     <section class="section" style="padding-top: 0;">
         <div class="container">
             <div class="contact-box glass-card reveal">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p><i data-lucide="map-pin"></i> 31 Medulla Ave, Etobicoke, ON M8Z 5L6</p>
-                    <p><i data-lucide="phone"></i> (416)-820-6956</p>
-                    <p><i data-lucide="mail"></i> <a href="mailto:info@maysgroup.ca"
-                            style="text-decoration:none; color: #218c53">info@maysgroup.ca</a></p>
+                <div class="contact-left-col">
+                    <div class="contact-info">
+                        <h3 style="margin-bottom: 20px">Get in Touch</h3>
+
+                        <!-- Address -->
+                        <div class="contact-row" style="display: flex; align-items: center; margin-bottom: 25px;">
+                            <div class="icon-box"
+                                style="width: 40px; display: flex; justify-content: center; margin-right: 10px;">
+                                <i data-lucide="map-pin"
+                                    style="width: 24px; height: 24px; color: var(--dark-text);"></i>
+                            </div>
+                            <span style="font-size: 1.05rem;">31 Medulla Ave, Etobicoke, ON M8Z 5L6</span>
+                        </div>
+
+                        <!-- Phone (WhatsApp Only) -->
+                        <div class="contact-row" style="display: flex; align-items: center; margin-bottom: 25px;">
+                            <div class="icon-box"
+                                style="width: 40px; display: flex; justify-content: center; margin-right: 10px;">
+                                <a href="https://wa.me/14168206956" target="_blank"
+                                    style="display: block; width: 100%; height: 100%; text-align: center;">
+                                    <img src="images/logos/wats.png" alt="WhatsApp"
+                                        style="width: 32px; height: 32px; object-fit: contain; cursor: pointer;">
+                                </a>
+                            </div>
+                            <span style="font-size: 1.05rem;">(416)-820-6956</span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="contact-row" style="display: flex; align-items: center;">
+                            <div class="icon-box"
+                                style="width: 40px; display: flex; justify-content: center; margin-right: 10px;">
+                                <i data-lucide="mail" style="width: 24px; height: 24px; color: var(--dark-text);"></i>
+                            </div>
+                            <a href="mailto:sales@maysgroup.ca"
+                                style="text-decoration:none; color: #218c53; font-weight: 600; font-size: 1.05rem;">sales@maysgroup.ca</a>
+                        </div>
+                    </div>
+
+                    <div class="map-container"
+                        style="border-radius: 15px; overflow: hidden; height: 300px; width: 100%;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20000.621234567!2d-79.530!3d43.625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b37c000000000%3A0x0000000000000000!2s31%20Medulla%20Ave%2C%20Etobicoke%2C%20ON%20M8Z%205L6!5e0!3m2!1sen!2sca!4v1600000000000!5m2!1sen!2sca"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
                 </div>
-                <div class="map-container"
-                    style="border-radius: 15px; overflow: hidden; height: 100%; min-height: 450px;">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10000.621234567!2d-79.530!3d43.625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b37c000000000%3A0x0000000000000000!2s31%20Medulla%20Ave%2C%20Etobicoke%2C%20ON%20M8Z%205L6!5e0!3m2!1sen!2sca!4v1600000000000!5m2!1sen!2sca"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-                    </iframe>
+
+                <div class="contact-form-container">
+                    <h3 style="margin-bottom: 20px">Send Us a Message</h3>
+                    <form action="https://formspree.io/f/mjgbzwev" method="POST" class="contact-form">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="text" name="subject" placeholder="Subject" required>
+                        <textarea name="message" rows="5" placeholder="Message" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
                 </div>
             </div>
     </section>

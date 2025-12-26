@@ -176,7 +176,8 @@ body {
     transform: translateX(-50%);
     width: 90%;
     max-width: 1200px;
-    padding: 15px 30px;
+    padding: 5px 30px;
+    /* Thinner bar */
     background: var(--glass-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -205,19 +206,40 @@ body {
 }
 
 .logo img {
-    height: 50px;
+    height: 75px;
+    /* Bigger by request */
     width: auto;
-    max-width: 100px;
-    /* Safety cap */
-    display: block;
 }
 
+/* Reverted Font Size Bump */
+
 .logo-green {
+    font-weight: 800;
     color: var(--primary-green);
 }
 
 .logo-dark {
     color: #5D4037;
+}
+
+.division-card .icon-wrapper {
+    width: 140px;
+    /* Increased from ~80/100px */
+    height: 140px;
+    background: white;
+    border-radius: 20px;
+    /* More rectangular if needed, or keep circle? User said "white square background a rectangle so taller" if space doesn't fit. Let's make it a large rounded soft square/rect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.division-card .icon-wrapper img {
+    width: 85%;
+    /* Bigger logo custom fit */
+    height: auto;
 }
 
 .maple-icon {
@@ -1028,19 +1050,50 @@ body {
 
 
 /* Contact */
+/* Navigation & Logo */
+.logo img {
+    height: 75px;
+    /* Bigger by request */
+    width: auto;
+}
+
+/* Contact Section Redesign */
 .contact-box {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 60px;
-    gap: 60px;
+    grid-template-columns: 1fr 1.2fr;
+    /* Info/Map on left (smaller), Form on right (wider) */
+    gap: 40px;
+    padding: 40px;
     align-items: start;
+}
+
+.contact-left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.map-container {
+    height: 300px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    text-align: left;
+}
+
+.contact-form-container {
+    width: 100%;
 }
 
 @media (max-width: 900px) {
     .contact-box {
         grid-template-columns: 1fr;
-        padding: 40px;
-        gap: 40px;
+    }
+
+    .map-container {
+        height: 250px;
     }
 }
 
@@ -1111,6 +1164,76 @@ body {
     letter-spacing: 0.5px;
 }
 
+/* Navbar */
+.glass-nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    padding: 5px 30px;
+    /* Thinner bar */
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    /* Reduced gap to fit more */
+    margin-top: 40px;
+    padding: 20px;
+    width: 100%;
+}
+
+.logo-item {
+    width: 180px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    /* Ensure no flex-grow that forces single column */
+    flex: 0 0 auto;
+}
+
+.logo-item:hover {
+    transform: translateY(-5px);
+}
+
+.logo-item img {
+    max-width: 120%;
+    /* Bigger */
+    max-height: 120%;
+    /* Bigger */
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(0%);
+    transition: filter 0.3s;
+    opacity: 1;
+    /* Make them pop */
+}
+
+.logo-item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
 /* Customers marquee */
 .customers-section {
     background: #f8fafc;
@@ -1133,44 +1256,114 @@ body {
     color: Black;
 }
 
-.logo-grid {
+/* Services Page Redesign */
+.services-layout {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
-    padding: 20px;
+    flex-direction: column;
+    gap: 80px;
+    padding-bottom: 60px;
 }
 
-.logo-item {
-    width: 180px;
-    height: 100px;
+.service-section {
+    position: relative;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    scroll-margin-top: 160px;
+    /* Offset for fixed navbar to center view */
+}
+
+.service-section:last-child {
+    border-bottom: none;
+}
+
+.service-header-row {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    border-radius: 12px;
-    padding: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 20px;
 }
 
-.logo-item:hover {
-    transform: translateY(-5px);
-}
-
-.logo-item img {
-    max-width: 120%;
-    max-height: 120%;
-    object-fit: contain;
-    filter: grayscale(0%);
-    transition: filter 0.3s;
+.service-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-green);
     opacity: 0.8;
+    line-height: 1;
 }
 
-.logo-item:hover img {
-    filter: grayscale(0%);
-    opacity: 1;
+.service-title-block {
+    flex: 1;
+    padding-top: 10px;
+}
+
+.service-title-block h2 {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin: 0;
+    line-height: 1.1;
+}
+
+.service-subtitle {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #8d6e63;
+    /* Brownish tone from logo */
+    letter-spacing: 1px;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.website-banner {
+    display: inline-block;
+    background: #E8F5E9;
+    /* Light green bg */
+    color: var(--primary-green);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-top: 8px;
+    border: 1px solid rgba(46, 139, 87, 0.2);
+    letter-spacing: 0.5px;
+}
+
+.service-logo img {
+    width: 120px;
+    /* Adjust size */
+    height: auto;
+}
+
+.service-content-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.service-text-col p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .service-header-row {
+        flex-wrap: wrap;
+    }
+
+    .service-logo {
+        order: -1;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .service-content-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
 
 @media (max-width: 640px) {
