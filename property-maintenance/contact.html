@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Property Maintenance</title>
+    <link rel="stylesheet" href="../styles.v10.css">
+    <link rel="stylesheet" href="pm-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="pm-site">
+    <nav class="glass-nav">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                    <img src="../images/logos/logo.png" alt="Mays Group">
+                    <span class="logo-green">Property</span> <span class="logo-dark">Maintenance</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="../index.html">Main Site</a></li>
+            </ul>
+            <div class="hamburger">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="../index.html">Main Site</a>
+    </div>
+
+    <header class="pm-hero" style="padding: 110px 0 90px; background: linear-gradient(120deg, rgba(31,41,55,0.9), rgba(46,139,87,0.85)), url('../images/services/MaysGroup_Small_013.jpg') center/cover no-repeat;">
+        <div class="container">
+            <h1>Tell us about your property</h1>
+            <p>We will build a maintenance plan with clear schedules, pricing, and reporting standards.</p>
+        </div>
+    </header>
+
+    <section class="pm-section">
+        <div class="container pm-grid pm-contact">
+            <div class="pm-card">
+                <h2 class="section-title">Request a quote</h2>
+                <p class="section-subtitle">Share your site details and preferred services.</p>
+                <form class="pm-form">
+                    <label>
+                        Property name
+                        <input type="text" name="property" placeholder="Example: Lakeside Plaza" required>
+                    </label>
+                    <label>
+                        Location
+                        <input type="text" name="location" placeholder="City / address" required>
+                    </label>
+                    <label>
+                        Services needed
+                        <select name="service" required>
+                            <option value="">Select an option</option>
+                            <option>Snow & Ice</option>
+                            <option>Landscape & Lawn</option>
+                            <option>Parking & Site Care</option>
+                            <option>Day porter / On-demand</option>
+                        </select>
+                    </label>
+                    <label>
+                        Notes
+                        <textarea name="notes" placeholder="Tell us about timelines, pain points, or budget."></textarea>
+                    </label>
+                    <button type="submit" class="btn btn-primary">Send request</button>
+                </form>
+            </div>
+            <div class="pm-card pm-contact-card">
+                <h3>Need to talk now?</h3>
+                <p>Call dispatch or email our team—responses within one business day.</p>
+                <ul>
+                    <li>Phone: <a href="tel:+14169999999">(416) 999-9999</a></li>
+                    <li>Email: <a href="mailto:info@maysgroup.ca">info@maysgroup.ca</a></li>
+                    <li>Coverage: Greater Toronto & Southern Ontario</li>
+                </ul>
+                <div class="pm-hero-actions" style="margin-top:10px;">
+                    <a href="services.html" class="btn btn-secondary">Review services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 Mays Group. Property Maintenance Division.</p>
+            <div class="socials">
+                <a href="#"><i data-lucide="instagram"></i></a>
+                <a href="#"><i data-lucide="twitter"></i></a>
+                <a href="#"><i data-lucide="linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../app.v10.js"></script>
+    <script src="pm-app.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
