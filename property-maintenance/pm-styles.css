@@ -382,8 +382,9 @@ a {
 }
 
 .contact-visual {
+    background-color: var(--pm-forest);
+    /* Fallback */
     background-image: url('images/contact.jpg');
-    /* Updated to contact.jpg */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -478,4 +479,93 @@ a {
 .site-footer p {
     opacity: 0.7;
     font-size: 0.9rem;
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* Container Padding */
+    .nav-container,
+    .container,
+    .hero-content {
+        padding: 0 20px;
+    }
+
+    /* Navigation */
+    .nav-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .pm-logo img {
+        height: 32px;
+    }
+
+    /* Hero */
+    .arch-hero {
+        align-items: center;
+        /* Center vertically on mobile */
+        padding-bottom: 0;
+    }
+
+    .hero-card {
+        padding: 30px;
+        border-left-width: 4px;
+        margin-top: 60px;
+        /* Spacer for nav */
+    }
+
+    .hero-card h1 {
+        font-size: 2rem;
+    }
+
+    .hero-card p {
+        font-size: 1rem;
+    }
+
+    /* Features */
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .feature-item {
+        border-left: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        padding-top: 20px;
+        padding-left: 0;
+    }
+
+    /* Section Headers */
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    /* About Section Grid */
+    section[style*="grid-template-columns: 1fr 1fr"] .container {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+
+    /* Contact Page */
+    .contact-split {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-visual {
+        padding: 60px 20px;
+        padding-top: 150px;
+        /* Spacer for stacked nav */
+        min-height: 300px;
+    }
+
+    .contact-form-panel {
+        padding: 40px 20px;
+    }
 }
