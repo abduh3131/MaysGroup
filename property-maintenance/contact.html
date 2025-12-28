@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pm-styles.css">
+    <title>Contact | Property Maintenance</title>
+</head>
+
+<body class="pm-site">
+
+    <!-- Top Navigation -->
+    <nav class="pm-nav">
+        <div class="nav-container">
+            <a href="index.html" class="pm-logo">
+                <img src="../images/logos/logo.png" alt="Mays Group">
+                <div class="pm-logo-text">
+                    MAYS GROUP
+                    <span class="sub">PROPERTY MAINTENANCE</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Split Screen Contact -->
+    <div class="contact-split">
+        <!-- Visual / Info Side -->
+        <div class="contact-visual">
+            <div class="visual-content">
+                <h2>Get in Touch</h2>
+                <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 40px; max-width: 400px;">
+                    Ready to elevate your property? Contact us for a consultation or quote.
+                </p>
+
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <i data-lucide="map-pin"></i> <span>31 Medulla Ave, Etobicoke, ON M8Z 5L6</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="../images/logos/wats.png" alt="WhatsApp" style="width: 24px;">
+                        <span>(416)-820-6956</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <i data-lucide="mail"></i> <span>sales@maysgroup.ca</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Side -->
+        <div class="contact-form-panel">
+            <div style="max-width: 500px; width: 100%; margin: 0 auto;">
+                <h3 style="margin-bottom: 30px; font-size: 1.8rem;">Request Service</h3>
+
+                <form action="https://formspree.io/f/mjgbzwev" method="POST">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" name="name" class="form-input" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" name="email" class="form-input" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Subject / Property Address</label>
+                        <input type="text" name="subject" class="form-input" placeholder="123 Main St - Quote" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Service Type</label>
+                        <select name="service" class="form-input" style="background: white;">
+                            <option value="" disabled selected>Select a Service</option>
+                            <option value="maintenance">General Maintenance</option>
+                            <option value="snow">Snow Removal</option>
+                            <option value="landscaping">Landscaping / Hardscaping</option>
+                            <option value="emergency">Emergency</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Message</label>
+                        <textarea name="message" rows="4" class="form-input" placeholder="How can we help you?"
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

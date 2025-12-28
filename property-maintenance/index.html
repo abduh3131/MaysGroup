@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pm-styles.css">
+    <title>Mays Group | Property Maintenance</title>
+</head>
+
+<body class="pm-site">
+
+    <!-- Top Navigation -->
+    <nav class="pm-nav">
+        <div class="nav-container">
+            <a href="index.html" class="pm-logo">
+                <img src="../images/logos/logo.png" alt="Mays Group">
+                <div class="pm-logo-text">
+                    MAYS GROUP
+                    <span class="sub">PROPERTY MAINTENANCE</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Architectural Hero -->
+    <header class="arch-hero">
+        <!-- Hero Slider Images -->
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('images/cover.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/cover2.jpg');"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-card">
+                <h1>The Future of Groundskeeping</h1>
+                <p>Advanced 4-season care powered by GPS verification and live cloud reporting. Data-driven property
+                    management for the modern era.</p>
+                <a href="services.html" class="btn-arch">Explore Services</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Feature Strip -->
+    <section class="feature-strip">
+        <div class="container">
+            <div class="feature-grid">
+                <!-- Feature 1 -->
+                <div class="feature-item">
+                    <i data-lucide="map-pin" class="feature-icon"></i>
+                    <h3>GPS Verified Visits</h3>
+                    <p>Every vehicle is tracked in real-time. We provide digital proof with precise timestamps for every
+                        service visit.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature-item">
+                    <i data-lucide="cloud" class="feature-icon"></i>
+                    <h3>Cloud Reporting</h3>
+                    <p>Photos of every job are instantly uploaded to your private portal. Accessible 24/7 for total
+                        transparency.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature-item">
+                    <i data-lucide="shield-check" class="feature-icon"></i>
+                    <h3>$5M Liability Coverage</h3>
+                    <p>Comprehensive insurance coverage protecting your property against unforeseen incidents. Peace of
+                        mind included.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Context -->
+    <section class="section" style="padding: 100px 0;">
+        <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+            <div>
+                <img src="../images/logos/p.png" alt="Property Maintenance"
+                    style="width: 100%; max-width: 400px; display: block; margin: 0 auto; opacity: 0.9;">
+            </div>
+            <div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 25px;">Established in 2016.</h2>
+                <p style="font-size: 1.1rem; color: var(--pm-text-muted); margin-bottom: 25px;">
+                    Our division has evolved into a technology-first maintenance provider. We blend traditional hard
+                    work with modern tools to deliver a service you can trust blindly.
+                </p>
+                <ul style="list-style: none; padding: 0; margin-bottom: 30px; font-size: 1.05rem;">
+                    <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i data-lucide="check" style="color: var(--pm-leaf);"></i> 4-Season Detailed Maintenance
+                    </li>
+                    <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i data-lucide="check" style="color: var(--pm-leaf);"></i> Live Ticket Updates
+                    </li>
+                    <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i data-lucide="check" style="color: var(--pm-leaf);"></i> Dedicated Account Managers
+                    </li>
+                </ul>
+                <a href="contact.html" class="btn-arch"
+                    style="background: transparent; color: var(--pm-forest); border: 2px solid var(--pm-forest);">
+                    Initialize Contract
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Mays Group Property Maintenance. All Rights Reserved.</p>
+            <p style="font-size: 0.75rem; opacity: 0.5; margin-top: 10px;">Engineering and design by Abdullah Hanoosh
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+
+        // Hero Slider Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.hero-slide');
+            let currentSlide = 0;
+
+            setInterval(() => {
+                // Remove active from current
+                slides[currentSlide].classList.remove('active');
+
+                // Move to next
+                currentSlide = (currentSlide + 1) % slides.length;
+
+                // Add active to next
+                slides[currentSlide].classList.add('active');
+            }, 5000);
+        });
+    </script>
+</body>
+
+</html>
