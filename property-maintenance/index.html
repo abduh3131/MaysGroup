@@ -1,179 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mays Group | Property Maintenance</title>
-    <link rel="stylesheet" href="../styles.v10.css">
     <link rel="stylesheet" href="pm-styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>Mays Group | Property Maintenance</title>
 </head>
+
 <body class="pm-site">
-    <nav class="glass-nav">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
-                    <img src="../images/logos/logo.png" alt="Mays Group">
-                    <span class="logo-green">Property</span> <span class="logo-dark">Maintenance</span>
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="../index.html">Main Site</a></li>
+
+    <!-- Top Navigation -->
+    <nav class="pm-nav">
+        <div class="nav-container">
+            <a href="index.html" class="pm-logo">
+                <img src="../images/logos/logo.png" alt="Mays Group">
+                <div class="pm-logo-text">
+                    MAYS GROUP
+                    <span class="sub">PROPERTY MAINTENANCE</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <i data-lucide="menu"></i>
-            </div>
         </div>
     </nav>
 
-    <div class="mobile-menu">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-        <a href="../index.html">Main Site</a>
-    </div>
+    <!-- Architectural Hero -->
+    <header class="arch-hero">
+        <!-- Hero Slider Images -->
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('images/cover.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/cover2.jpg');"></div>
+        </div>
 
-    <header class="pm-hero">
-        <div class="container">
-            <h1>Four-season care that keeps commercial sites clean, safe, and inviting.</h1>
-            <p>Dedicated maintenance crews for plazas, condos, and municipal properties with documented results after
-                every visit.</p>
-            <div class="pm-hero-actions">
-                <a href="contact.html" class="btn btn-primary">Request a Walkthrough</a>
-                <a href="services.html" class="btn btn-secondary">View Programs</a>
-            </div>
-            <div class="pm-badges">
-                <span class="pm-pill">Snow & Ice</span>
-                <span class="pm-pill">Landscape & Lawn</span>
-                <span class="pm-pill">Parking & Site Care</span>
-                <span class="pm-pill">Photo-verified reporting</span>
+        <div class="hero-content">
+            <div class="hero-card">
+                <h1>The Future of Groundskeeping</h1>
+                <p>Advanced 4-season care powered by GPS verification and live cloud reporting. Data-driven property
+                    management for the modern era.</p>
+                <a href="services.html" class="btn-arch">Explore Services</a>
             </div>
         </div>
     </header>
 
-    <section class="container pm-intro">
-        <div>
-            <h2 class="section-title">Built for property managers</h2>
-            <p class="section-subtitle">Planned routes, accountable crews, and cloud photo logs keep tenants and boards
-                confident.</p>
-            <ul>
-                <li>Seasonal contracts with proactive scheduling</li>
-                <li>WSIB compliance and site-specific safety plans</li>
-                <li>GPS-tracked visits with time-stamped photos</li>
-            </ul>
-        </div>
-        <div class="pm-card pm-highlight">
-            <h3>Ready for peak season</h3>
-            <p>Winter routes, summer cleanups, and day porter programs are set up in advance so coverage is never in
-                doubt.</p>
-            <div class="pm-hero-actions">
-                <a href="contact.html" class="btn btn-primary">Book a Site Review</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="pm-section">
-        <div class="container pm-grid pm-service-grid">
-            <div class="pm-card">
-                <h3>Landscape & Lawn</h3>
-                <p>Weekly grounds checks, mowing, edging, and garden care that keep entrances and walkways welcoming.</p>
-                <ul>
-                    <li>Spring/fall cleanups and mulching</li>
-                    <li>Tree, shrub, and bed maintenance</li>
-                    <li>Irrigation monitoring and adjustments</li>
-                </ul>
-            </div>
-            <div class="pm-card">
-                <h3>Snow & Ice</h3>
-                <p>Reliable plowing, salting, and de-icing with GPS proof of service for every dispatch.</p>
-                <ul>
-                    <li>Pre-season staking and route planning</li>
-                    <li>Weather tracking and proactive mobilization</li>
-                    <li>Loader support for high-volume sites</li>
-                </ul>
-            </div>
-            <div class="pm-card">
-                <h3>Parking & Site Care</h3>
-                <p>Day porters, sweeping, and repairs to protect pavement and keep storefronts spotless.</p>
-                <ul>
-                    <li>Litter pick-up and waste station upkeep</li>
-                    <li>Trip-hazard inspections and reporting</li>
-                    <li>Line painting and seasonal pressure washing</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="pm-section" style="background:#f0f4f2;">
-        <div class="container pm-grid pm-ops">
-            <div class="pm-card">
-                <h2 class="section-title">Operations that stay accountable</h2>
-                <p class="section-subtitle">Foremen verify work on-site and upload photos immediately so you always know
-                    what was completed.</p>
-                <ul class="pm-checklist">
-                    <li>Time-stamped photo proof after each visit</li>
-                    <li>Real-time communication with dispatch</li>
-                    <li>Dedicated supervisor for escalations</li>
-                </ul>
-            </div>
-            <div class="pm-card pm-highlight">
-                <h3>Mobilized within 48 hours</h3>
-                <p>Share your property requirements and we will issue a tailored plan and route map within two business
-                    days.</p>
-                <div class="pm-hero-actions">
-                    <a href="services.html" class="btn btn-secondary">See service menu</a>
-                    <a href="contact.html" class="btn btn-primary">Start a plan</a>
+    <!-- Feature Strip -->
+    <section class="feature-strip">
+        <div class="container">
+            <div class="feature-grid">
+                <!-- Feature 1 -->
+                <div class="feature-item">
+                    <i data-lucide="map-pin" class="feature-icon"></i>
+                    <h3>GPS Verified Visits</h3>
+                    <p>Every vehicle is tracked in real-time. We provide digital proof with precise timestamps for every
+                        service visit.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature-item">
+                    <i data-lucide="cloud" class="feature-icon"></i>
+                    <h3>Cloud Reporting</h3>
+                    <p>Photos of every job are instantly uploaded to your private portal. Accessible 24/7 for total
+                        transparency.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature-item">
+                    <i data-lucide="shield-check" class="feature-icon"></i>
+                    <h3>$5M Liability Coverage</h3>
+                    <p>Comprehensive insurance coverage protecting your property against unforeseen incidents. Peace of
+                        mind included.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="pm-section">
-        <div class="container pm-grid">
+    <!-- About / Context -->
+    <section class="section" style="padding: 100px 0;">
+        <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
             <div>
-                <p class="eyebrow">Recent work</p>
-                <h2 class="section-title">Seasonal crews in action</h2>
-                <p class="section-subtitle">Sized gallery with the same carousel controls as our main site. Click any
-                    image for a closer look.</p>
+                <img src="../images/logos/p.png" alt="Property Maintenance"
+                    style="width: 100%; max-width: 400px; display: block; margin: 0 auto; opacity: 0.9;">
             </div>
-            <div class="pm-gallery-shell" id="pm-gallery"></div>
+            <div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 25px;">Established in 2016.</h2>
+                <p style="font-size: 1.1rem; color: var(--pm-text-muted); margin-bottom: 25px;">
+                    Our division has evolved into a technology-first maintenance provider. We blend traditional hard
+                    work with modern tools to deliver a service you can trust blindly.
+                </p>
+                <ul style="list-style: none; padding: 0; margin-bottom: 30px; font-size: 1.05rem;">
+                    <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i data-lucide="check" style="color: var(--pm-leaf);"></i> 4-Season Detailed Maintenance
+                    </li>
+                    <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i data-lucide="check" style="color: var(--pm-leaf);"></i> Live Ticket Updates
+                    </li>
+                    <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i data-lucide="check" style="color: var(--pm-leaf);"></i> Dedicated Account Managers
+                    </li>
+                </ul>
+                <a href="contact.html" class="btn-arch"
+                    style="background: transparent; color: var(--pm-forest); border: 2px solid var(--pm-forest);">
+                    Initialize Contract
+                </a>
+            </div>
         </div>
     </section>
 
-    <section class="pm-section">
-        <div class="container pm-cta-band">
-            <div>
-                <p class="eyebrow">Ready to go</p>
-                <h2 class="section-title">Let's design the right program for your property.</h2>
-                <p class="section-subtitle">Share your site priorities and we will build a seasonal schedule with clear
-                    budgets and reporting.</p>
-            </div>
-            <div class="pm-cta-actions">
-                <a href="contact.html" class="btn btn-primary">Request a Quote</a>
-                <a href="services.html" class="btn btn-secondary">See Services</a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>&copy; 2025 Mays Group. Property Maintenance Division.</p>
-            <div class="socials">
-                <a href="#"><i data-lucide="instagram"></i></a>
-                <a href="#"><i data-lucide="twitter"></i></a>
-                <a href="#"><i data-lucide="linkedin"></i></a>
-            </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Mays Group Property Maintenance. All Rights Reserved.</p>
+            <p style="font-size: 0.75rem; opacity: 0.5; margin-top: 10px;">Engineering and design by Abdullah Hanoosh
+            </p>
         </div>
     </footer>
 
-    <script src="../app.v10.js"></script>
-    <script src="pm-app.js"></script>
-    <script>lucide.createIcons();</script>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+
+        // Hero Slider Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.hero-slide');
+            let currentSlide = 0;
+
+            setInterval(() => {
+                // Remove active from current
+                slides[currentSlide].classList.remove('active');
+
+                // Move to next
+                currentSlide = (currentSlide + 1) % slides.length;
+
+                // Add active to next
+                slides[currentSlide].classList.add('active');
+            }, 5000);
+        });
+    </script>
 </body>
+
 </html>

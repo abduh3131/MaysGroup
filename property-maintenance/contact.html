@@ -1,110 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Property Maintenance</title>
-    <link rel="stylesheet" href="../styles.v10.css">
     <link rel="stylesheet" href="pm-styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>Contact | Property Maintenance</title>
 </head>
+
 <body class="pm-site">
-    <nav class="glass-nav">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
-                    <img src="../images/logos/logo.png" alt="Mays Group">
-                    <span class="logo-green">Property</span> <span class="logo-dark">Maintenance</span>
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-                <li><a href="../index.html">Main Site</a></li>
+
+    <!-- Top Navigation -->
+    <nav class="pm-nav">
+        <div class="nav-container">
+            <a href="index.html" class="pm-logo">
+                <img src="../images/logos/logo.png" alt="Mays Group">
+                <div class="pm-logo-text">
+                    MAYS GROUP
+                    <span class="sub">PROPERTY MAINTENANCE</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <i data-lucide="menu"></i>
-            </div>
         </div>
     </nav>
 
-    <div class="mobile-menu">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-        <a href="../index.html">Main Site</a>
-    </div>
+    <!-- Split Screen Contact -->
+    <div class="contact-split">
+        <!-- Visual / Info Side -->
+        <div class="contact-visual">
+            <div class="visual-content">
+                <h2>Get in Touch</h2>
+                <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 40px; max-width: 400px;">
+                    Ready to elevate your property? Contact us for a consultation or quote.
+                </p>
 
-    <header class="pm-hero" style="padding: 110px 0 90px; background: linear-gradient(120deg, rgba(31,41,55,0.9), rgba(46,139,87,0.85)), url('../images/services/MaysGroup_Small_013.jpg') center/cover no-repeat;">
-        <div class="container">
-            <h1>Tell us about your property</h1>
-            <p>We will build a maintenance plan with clear schedules, pricing, and reporting standards.</p>
-        </div>
-    </header>
-
-    <section class="pm-section">
-        <div class="container pm-grid pm-contact">
-            <div class="pm-card">
-                <h2 class="section-title">Request a quote</h2>
-                <p class="section-subtitle">Share your site details and preferred services.</p>
-                <form class="pm-form">
-                    <label>
-                        Property name
-                        <input type="text" name="property" placeholder="Example: Lakeside Plaza" required>
-                    </label>
-                    <label>
-                        Location
-                        <input type="text" name="location" placeholder="City / address" required>
-                    </label>
-                    <label>
-                        Services needed
-                        <select name="service" required>
-                            <option value="">Select an option</option>
-                            <option>Snow & Ice</option>
-                            <option>Landscape & Lawn</option>
-                            <option>Parking & Site Care</option>
-                            <option>Day porter / On-demand</option>
-                        </select>
-                    </label>
-                    <label>
-                        Notes
-                        <textarea name="notes" placeholder="Tell us about timelines, pain points, or budget."></textarea>
-                    </label>
-                    <button type="submit" class="btn btn-primary">Send request</button>
-                </form>
-            </div>
-            <div class="pm-card pm-contact-card">
-                <h3>Need to talk now?</h3>
-                <p>Call dispatch or email our team—responses within one business day.</p>
-                <ul>
-                    <li>Phone: <a href="tel:+14169999999">(416) 999-9999</a></li>
-                    <li>Email: <a href="mailto:info@maysgroup.ca">info@maysgroup.ca</a></li>
-                    <li>Coverage: Greater Toronto & Southern Ontario</li>
-                </ul>
-                <div class="pm-hero-actions" style="margin-top:10px;">
-                    <a href="services.html" class="btn btn-secondary">Review services</a>
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <i data-lucide="map-pin"></i> <span>31 Medulla Ave, Etobicoke, ON M8Z 5L6</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="../images/logos/wats.png" alt="WhatsApp" style="width: 24px;">
+                        <span>(416)-820-6956</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <i data-lucide="mail"></i> <span>sales@maysgroup.ca</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>&copy; 2025 Mays Group. Property Maintenance Division.</p>
-            <div class="socials">
-                <a href="#"><i data-lucide="instagram"></i></a>
-                <a href="#"><i data-lucide="twitter"></i></a>
-                <a href="#"><i data-lucide="linkedin"></i></a>
+        <!-- Form Side -->
+        <div class="contact-form-panel">
+            <div style="max-width: 500px; width: 100%; margin: 0 auto;">
+                <h3 style="margin-bottom: 30px; font-size: 1.8rem;">Request Service</h3>
+
+                <form action="https://formspree.io/f/mjgbzwev" method="POST">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" name="name" class="form-input" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" name="email" class="form-input" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Subject / Property Address</label>
+                        <input type="text" name="subject" class="form-input" placeholder="123 Main St - Quote" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Service Type</label>
+                        <select name="service" class="form-input" style="background: white;">
+                            <option value="" disabled selected>Select a Service</option>
+                            <option value="maintenance">General Maintenance</option>
+                            <option value="snow">Snow Removal</option>
+                            <option value="landscaping">Landscaping / Hardscaping</option>
+                            <option value="emergency">Emergency</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Message</label>
+                        <textarea name="message" rows="4" class="form-input" placeholder="How can we help you?"
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
             </div>
         </div>
-    </footer>
+    </div>
 
-    <script src="../app.v10.js"></script>
-    <script src="pm-app.js"></script>
-    <script>lucide.createIcons();</script>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
+
 </html>
