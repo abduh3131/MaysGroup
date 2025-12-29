@@ -240,13 +240,55 @@ const initSimpleSlideshow = (containerId, images, interval = 5000) => {
     }, interval);
 };
 
-// Init About Slideshow
-initSimpleSlideshow('about-slideshow', [
-    'images/AboutUs/aboutus.png',
-    'images/AboutUs/au2.png',
-    'images/AboutUs/IMG-20190523-WA0003.jpg',
-    'images/AboutUs/IMG-20190822-WA0023.jpg',
-    'images/AboutUs/IMG-20190822-WA0040.jpg',
-    'images/AboutUs/IMG-20201201-WA0052.jpg',
-    'images/AboutUs/IMG-20230820-WA0003.jpg',
+// Founder Slideshow with Captions
+const initFounderSlideshow = (containerId, slides, interval = 5000) => {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    container.innerHTML = '';
+
+    const slideElements = [];
+
+    slides.forEach((slide, index) => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'founder-slide-wrapper';
+        if (index === 0) wrapper.classList.add('active');
+
+        const img = document.createElement('img');
+        img.src = slide.src;
+        img.alt = slide.caption;
+        img.className = 'founder-slide-img';
+
+        const caption = document.createElement('div');
+        caption.className = 'founder-caption';
+        caption.innerText = slide.caption;
+
+        wrapper.appendChild(img);
+        wrapper.appendChild(caption);
+        container.appendChild(wrapper);
+        slideElements.push(wrapper);
+    });
+
+    let currentIndex = 0;
+
+    setInterval(() => {
+        // Remove active
+        slideElements[currentIndex].classList.remove('active');
+
+        // Next
+        currentIndex = (currentIndex + 1) % slideElements.length;
+
+        // Add active
+        slideElements[currentIndex].classList.add('active');
+    }, interval);
+};
+
+// Init Founder Slideshow
+initFounderSlideshow('founder-slideshow', [
+    { src: 'images/au5.png', caption: 'Mustafa Tawfiq, Founder' },
+    { src: 'images/mustafa20152.png', caption: 'Mustafa Tawfiq 2015' },
+    { src: 'images/mustafa2025.png', caption: 'Mustafa Tawfiq 2025' }
 ], 5000);
+
+// Init About Slideshow (Keeping if needed elsewhere or remove if replaced)
+// initSimpleSlideshow('about-slideshow', [...]);

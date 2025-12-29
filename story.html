@@ -120,10 +120,8 @@
 </head>
 
 <body>
-    <div class="blob-cont">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-    </div>
+    <!-- Blobs removed for Image Background (Updated) -->
+    <div class="story-bg"></div>
 
     <nav class="glass-nav">
         <div class="container nav-container">
@@ -163,7 +161,7 @@
     <section class="section" style="padding-top: 0;">
         <div class="container story-wrap">
             <div class="story-top">
-                <div class="text-content reveal">
+                <div class="story-intro reveal">
                     <p class="story-lead">
                         May’s Group began in 2014 as a small, family-run operation cutting grass and maintaining
                         properties with a simple focus: show up, do the work properly, and treat clients with respect.
@@ -182,56 +180,45 @@
                             Property Maintenance, Construction, and Restoration.
                         </p>
                     </div>
-
-                    <div class="story-block">
-                        <img src="images/widescale.png" alt="Scale Visualization"
-                            style="width: 100%; border-radius: 12px; margin-bottom: 20px; display: block;">
-                        <div class="story-block-title">Scale</div>
-                        <p class="story-text">
-                            Today, we service over 40 commercial properties and have successfully completed major
-                            projects across Ontario, including over 300 bus stops, parks, and specialized builds such as
-                            medical and lab construction.
-                        </p>
-                    </div>
-
-                    <div class="story-block">
-                        <div class="story-block-title">Standards</div>
-                        <!-- ... -->
-
-                        <p class="story-text">
-                            What makes May’s Group different is that we invest in people and standards. We consistently
-                            train our staff to deliver reliable, safe, high-quality work and we reward long-term
-                            commitment.
-                        </p>
-                    </div>
-
-                    <div class="story-block">
-                        <div class="story-block-title">Hands On</div>
-                        <p class="story-text">
-                            May’s Group remains hands-on and personal. The founder is still heavily involved in
-                            day-to-day operations and stays personally in touch with every client, ensuring
-                            accountability, quick decisions, and the same high standard on every site season after
-                            season.
-                        </p>
-                    </div>
                 </div>
 
-                <div class="image-content reveal delay-1" style="margin-left:15%">
-                    <img src="images/au5.png" alt="Mustafa Tawfiq - Founder" class="rounded-img large-shadow">
-                    <div class="caption">Mustafa Tawfiq, Founder</div>
-                    <!-- 2015 vs 2025 Images Moved Here -->
-                    <div class="story-images-col"
-                        style="margin-top: 30px; display: flex; flex-direction: column; gap: 20px;">
-                        <div class="story-image">
-                            <img src="images/mustafa20152.png" alt="Mustafa Tawfiq 2015">
-                            <div class="caption">Mustafa Tawfiq 2015</div>
-                        </div>
+                <!-- Founder Slideshow Container -->
+                <div id="founder-slideshow" class="founder-slideshow reveal delay-1">
+                    <!-- JS Injected -->
+                </div>
+            </div>
 
-                        <div class="story-image">
-                            <img src="images/mustafa2025.png" alt="Mustafa Tawfiq 2025">
-                            <div class="caption">Mustafa Tawfiq 2025</div>
-                        </div>
-                    </div>
+            <!-- Full Width Section -->
+            <div class="story-full-width reveal delay-2" style="margin-top: 50px;">
+                <img src="images/widescale.png" alt="Scale Visualization"
+                    style="width: 100%; border-radius: 12px; margin-bottom: 30px; display: block; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+
+                <div class="story-block">
+                    <div class="story-block-title">Scale</div>
+                    <p class="story-text">
+                        Today, we service over 40 commercial properties and have successfully completed major
+                        projects across Ontario, including over 300 bus stops, parks, and specialized builds such as
+                        medical and lab construction.
+                    </p>
+                </div>
+
+                <div class="story-block">
+                    <div class="story-block-title">Standards</div>
+                    <p class="story-text">
+                        What makes May’s Group different is that we invest in people and standards. We consistently
+                        train our staff to deliver reliable, safe, high-quality work and we reward long-term
+                        commitment.
+                    </p>
+                </div>
+
+                <div class="story-block">
+                    <div class="story-block-title">Hands On</div>
+                    <p class="story-text">
+                        May’s Group remains hands-on and personal. The founder is still heavily involved in
+                        day-to-day operations and stays personally in touch with every client, ensuring
+                        accountability, quick decisions, and the same high standard on every site season after
+                        season.
+                    </p>
                 </div>
             </div>
 
