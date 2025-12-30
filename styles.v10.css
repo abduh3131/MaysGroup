@@ -2100,53 +2100,115 @@ body {
 /* Responsive */
 @media (max-width: 900px) {
     .lightbox-hybrid-wrapper {
-        margin-top: 60px;
-        /* Space for fixed close button */
+        margin-top: 50px;
+        /* Space for close button */
+        width: 100%;
     }
 
+    /* Stack Columns */
     .lightbox-top-section {
         flex-direction: column;
         height: auto;
-        gap: 20px;
+        gap: 15px;
+        margin-bottom: 20px;
     }
 
+    /* Main Image Area */
     .lightbox-main-col {
         height: 50vh;
-        /* Shorter on mobile */
+        /* Good height for mobile portrait */
         width: 100%;
         flex: none;
+        border-radius: 0;
+        /* Full bleed potential */
+        background: black;
     }
 
+    .lightbox-main-img {
+        max-height: 50vh;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    /* Bigger Arrows for Touch */
     .lightbox-arrow {
-        width: 40px;
-        height: 40px;
-        background: rgba(0, 0, 0, 0.5);
+        width: 50px;
+        height: 50px;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
+    .lightbox-arrow svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* Filmstrip Gallery (Horizontal Scroll) */
     .lightbox-side-col {
-        height: auto;
-        max-height: 300px;
-        /* Limit height if needed, or let it scroll */
-        flex: none;
         width: 100%;
+        height: auto;
+        flex: none;
+        background: transparent;
+        border: none;
+        padding: 0 10px;
+        /* Side padding */
+        min-width: 0;
+    }
+
+    .lightbox-side-col h4 {
+        display: none;
+        /* Hide 'Project Gallery' title to save space on mobile */
     }
 
     .lightbox-side-grid {
         display: flex;
-        /* Horizontal scroll strip on mobile ? Or keep grid? User liked grid. */
-        /* Let's keep grid but maybe horizontal scroll wrapper if user prefers strip. 
-           User said "grid on the right", implying desktop. On mobile, grid below image is standard. */
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-        overflow-y: visible;
-        /* Expand to show all */
+        /* Horizontal Row */
+        flex-direction: row;
+        gap: 10px;
+        overflow-x: auto;
+        /* Horizontal Scroll */
+        overflow-y: hidden;
+        padding-bottom: 15px;
+        /* Space for scrollbar */
+        height: auto;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
     }
 
+    .lightbox-side-thumb {
+        width: 80px;
+        /* Fixed width for filmstrip items */
+        height: 80px;
+        flex-shrink: 0;
+        /* Don't squash */
+        border-radius: 6px;
+    }
+
+    /* Bottom Description */
     .lightbox-bottom-section {
         padding: 20px;
+        margin: 0 10px 40px 10px;
+        /* Side margins */
+        width: calc(100% - 20px);
+        background: transparent;
+        /* Cleaner on mobile */
+        border: none;
     }
 
     .lightbox-bottom-section h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+    }
+
+    .lightbox-desc-text p {
+        font-size: 1rem;
+    }
+
+    /* Close Button */
+    .lightbox-close {
+        top: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        background: rgba(0, 0, 0, 0.5);
     }
 }
