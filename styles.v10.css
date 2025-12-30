@@ -224,22 +224,38 @@ body {
 
 .division-card .icon-wrapper {
     width: 140px;
-    /* Increased from ~80/100px */
     height: 140px;
     background: white;
+    background-color: #ffffff !important;
+    background-image: none !important;
     border-radius: 20px;
-    /* More rectangular if needed, or keep circle? User said "white square background a rectangle so taller" if space doesn't fit. Let's make it a large rounded soft square/rect */
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    border: 3px solid transparent;
+    /* Base for trace border */
+    position: relative;
+    z-index: 2;
+}
+
+.division-card.construction .icon-wrapper {
+    border-color: var(--primary-orange);
+}
+
+.division-card.restoration .icon-wrapper {
+    border-color: var(--primary-yellow);
+}
+
+.division-card.maintenance .icon-wrapper {
+    border-color: var(--primary-green);
 }
 
 .division-card .icon-wrapper img {
     width: 85%;
-    /* Bigger logo custom fit */
     height: auto;
+    background-color: transparent !important;
 }
 
 .maple-icon {
@@ -499,15 +515,15 @@ body {
     .gallery-grid .carousel-container {
         position: relative;
         width: 100%;
-        height: 400px;
+        height: 850px;
         perspective: 1000px;
         overflow: hidden;
     }
 
     .gallery-grid .carousel-item {
         position: absolute;
-        width: 85%;
-        height: 100%;
+        width: 90%;
+        height: 400px;
         transition: all 0.5s ease-in-out;
         border-radius: 15px;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
@@ -519,6 +535,23 @@ body {
         transform: translateX(-50%) scale(0.9);
         opacity: 0.7;
         z-index: 1;
+    }
+
+    /* Mobile Caption Override */
+    .carousel-caption-container {
+        top: 420px;
+        width: 95%;
+        padding: 0;
+    }
+
+    .carousel-caption-title {
+        font-size: 1.15rem;
+        margin-bottom: 8px;
+    }
+
+    .carousel-caption-desc {
+        font-size: 0.95rem;
+        padding: 15px 20px;
     }
 
     .gallery-grid .carousel-item img {
@@ -1376,8 +1409,8 @@ body {
 }
 
 .service-logo img {
-    width: 120px;
-    /* Adjust size */
+    width: 180px;
+    /* Adjusted size another 15% */
     height: auto;
 }
 
@@ -1756,5 +1789,364 @@ body {
 
     .sub-img-wrap {
         height: 220px;
+    }
+}
+
+/* =========================================
+   Interactive Carousel & Lightbox Styles
+   ========================================= */
+
+/* Carousel Title Overlay (Corner Box) */
+.slide-title-overlay {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 15px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+    max-width: 80%;
+    z-index: 10;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slide-title-overlay div:first-child {
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+}
+
+.slide-title-overlay:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Hide old caption container if still present but unused */
+.carousel-caption-container {
+    display: none !important;
+}
+
+/* Lightbox Overlay */
+.project-lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.98);
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeInLightbox 0.4s forwards;
+}
+
+@keyframes fadeInLightbox {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Scrollable Container */
+.project-lightbox-content.vertical-scroll {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+}
+
+.lightbox-hybrid-wrapper {
+    width: 95%;
+    max-width: 1600px;
+    margin: 40px auto;
+    color: white;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- TOP SECTION: Image + Sidebar --- */
+.lightbox-top-section {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 40px;
+    height: 75vh;
+    /* Fixed height for top section to make sidebar scrollable */
+}
+
+/* A. Main Image Column */
+.lightbox-main-col {
+    flex: 3;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-main-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Arrows */
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+    z-index: 10;
+}
+
+.lightbox-arrow:hover {
+    background: white;
+    color: black;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-arrow.prev {
+    left: 20px;
+}
+
+.lightbox-arrow.next {
+    right: 20px;
+}
+
+
+/* B. Sidebar Column */
+.lightbox-side-col {
+    flex: 1;
+    height: 100%;
+    background: rgba(30, 30, 30, 0.5);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lightbox-side-col h4 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: var(--primary-green);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.lightbox-side-grid {
+    flex: 1;
+    /* Fills remaining height */
+    overflow-y: auto;
+    /* Scrollable thumbnails */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    align-content: start;
+    padding-right: 5px;
+    /* Space for scrollbar */
+}
+
+/* Custom Scrollbar for sidebar */
+.lightbox-side-grid::-webkit-scrollbar {
+    width: 6px;
+}
+
+.lightbox-side-grid::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.lightbox-side-grid::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+.lightbox-side-thumb {
+    width: 100%;
+    aspect-ratio: 1/1;
+    /* Square thumbnails */
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+}
+
+.lightbox-side-thumb:hover {
+    opacity: 1;
+    transform: scale(1.02);
+}
+
+.lightbox-side-thumb.active {
+    opacity: 1;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 10px rgba(var(--primary-green-rgb), 0.3);
+}
+
+
+/* --- BOTTOM SECTION: Description --- */
+.lightbox-bottom-section {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: slideUp 0.5s ease;
+}
+
+.lightbox-bottom-section h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.lightbox-location {
+    font-size: 1rem;
+    color: var(--primary-green);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.lightbox-desc-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #ddd;
+    margin: 0;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Close Button */
+.lightbox-close {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    z-index: 10010;
+    backdrop-filter: blur(5px);
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .lightbox-hybrid-wrapper {
+        margin-top: 60px;
+        /* Space for fixed close button */
+    }
+
+    .lightbox-top-section {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+
+    .lightbox-main-col {
+        height: 50vh;
+        /* Shorter on mobile */
+        width: 100%;
+        flex: none;
+    }
+
+    .lightbox-arrow {
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .lightbox-side-col {
+        height: auto;
+        max-height: 300px;
+        /* Limit height if needed, or let it scroll */
+        flex: none;
+        width: 100%;
+    }
+
+    .lightbox-side-grid {
+        display: flex;
+        /* Horizontal scroll strip on mobile ? Or keep grid? User liked grid. */
+        /* Let's keep grid but maybe horizontal scroll wrapper if user prefers strip. 
+           User said "grid on the right", implying desktop. On mobile, grid below image is standard. */
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        overflow-y: visible;
+        /* Expand to show all */
+    }
+
+    .lightbox-bottom-section {
+        padding: 20px;
+    }
+
+    .lightbox-bottom-section h2 {
+        font-size: 1.5rem;
     }
 }
