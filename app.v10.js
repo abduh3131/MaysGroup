@@ -61,6 +61,7 @@ const initCarousel = (containerId, itemsData) => {
         const img = document.createElement('img');
         img.src = itemData.cover;
         img.alt = itemData.title ? `${itemData.title} - ${itemData.location}` : 'Project Cover';
+        img.loading = "lazy";
         item.appendChild(img);
 
         // Corner Title
